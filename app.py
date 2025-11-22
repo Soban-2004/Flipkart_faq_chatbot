@@ -6,7 +6,8 @@ import qdrant_client
 # LlamaIndex Imports
 from llama_index.core import VectorStoreIndex, Settings
 from llama_index.vector_stores.qdrant import QdrantVectorStore
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+# from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.embeddings.fastembed import FastEmbedEmbedding
 from llama_index.llms.groq import Groq
 from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.callbacks import CallbackManager
@@ -27,10 +28,8 @@ if not QDRANT_API_KEY or not QDRANT_URL or not CHATGROQ_API_KEY:
     raise ValueError("❌ Missing API Keys. Please check your .env file.")
 
 # --- 1. GLOBAL SETTINGS ---
-Settings.embed_model = HuggingFaceEmbedding(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
-
+embed_model = FastEmbedEmbedding(model_name="BAAI/bge-small-en-v1.5")
+Settings.embed_model = embed_model
 Settings.llm = Groq(
     model="llama-3.1-8b-instant", 
     api_key=CHATGROQ_API_KEY
@@ -130,5 +129,6 @@ async def main(message: cl.Message):
 
 
     await msg.send()
+
 
 
