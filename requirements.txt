@@ -1,4 +1,6 @@
-torch==2.5.0
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
 sentence-transformers
 groq
 qdrant-client
@@ -8,5 +10,6 @@ llama-index-embeddings-huggingface
 llama-index-vector-stores-qdrant
 llama-index-llms-groq
 chainlit
+
 
 
