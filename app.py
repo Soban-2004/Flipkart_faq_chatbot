@@ -131,7 +131,4 @@ async def main(message: cl.Message):
 
     await msg.send()
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
-    import chainlit as cl
-    cl.run(host="0.0.0.0", port=port)
+
