@@ -1,5 +1,5 @@
+torch==2.1.0+cpu -f https://download.pytorch.org/whl/cpu
 sentence-transformers
-python-dotenv
 groq
 qdrant-client
 llama-index-core
@@ -8,3 +8,4 @@ llama-index-embeddings-huggingface
 llama-index-vector-stores-qdrant
 llama-index-llms-groq
 chainlit
+
