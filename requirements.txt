@@ -1,4 +1,4 @@
-fastembed==0.1.3
+fastembed
 llama-index-embeddings-fastembed
 groq
 qdrant-client
@@ -7,4 +7,5 @@ llama-index-readers-file
 llama-index-vector-stores-qdrant
 llama-index-llms-groq
 chainlit
+
 
