@@ -128,4 +128,10 @@ async def main(message: cl.Message):
     async for token in response.async_response_gen():
         await msg.stream_token(token)
 
+
     await msg.send()
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    import chainlit as cl
+    cl.run(host="0.0.0.0", port=port)
