@@ -189,6 +189,4 @@ This project is open source. Feel free to use and modify it for your own purpose
 
 ---
 
-<div align="center">
-  Made with ❤️ by <a href="https://github.com/Soban-2004">Soban</a>
-</div>
+
